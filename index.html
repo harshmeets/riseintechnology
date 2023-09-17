@@ -5,42 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Add your CSS styling here -->
-    <style>
+     <style>
         /* Style for the WhatsApp popup container */
-        .whatsapp-popup {
+        .whatsapp-popup-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            width: 150px;
             background-color: #25d366;
             color: #fff;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
+            border-radius: 10px;
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Style for the WhatsApp icon */
         .whatsapp-icon {
-            font-size: 10px;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        /* Style for the WhatsApp ping sign */
+        .ping-sign {
+            font-size: 18px;
+            color: red;
         }
     </style>
 </head>
 <body>
     <!-- WhatsApp Popup -->
-    <div class="whatsapp-popup" id="whatsapp-popup">
+    <div class="whatsapp-popup-container" id="whatsapp-popup">
         <i class="whatsapp-icon">WhatsApp</i>
+        <span class="ping-sign">•</span>
+        <p>Contact us</p>
     </div>
 
     <!-- Add your JavaScript code here -->
     <script>
-        // JavaScript to handle the WhatsApp popup click event
+        // JavaScript to show the WhatsApp popup and open WhatsApp on click
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('whatsapp-popup').style.display = 'flex';
+            }, 5000); // Adjust the delay (in milliseconds) as needed
+        });
+
         document.getElementById('whatsapp-popup').addEventListener('click', function () {
             // Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp phone number
-            var phoneNumber = '9129664191';
+            var phoneNumber = 'YOUR_PHONE_NUMBER';
             var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber;
 
             // Open WhatsApp in a new tab
