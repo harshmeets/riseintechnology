@@ -2,6 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Popup</title>
+
+    <!-- Add your CSS styling here -->
+    <style>
+        /* Style for the WhatsApp popup container */
+        .whatsapp-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Style for the WhatsApp icon */
+        .whatsapp-icon {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Popup -->
+    <div class="whatsapp-popup" id="whatsapp-popup">
+        <i class="whatsapp-icon">WhatsApp</i>
+    </div>
+
+    <!-- Add your JavaScript code here -->
+    <script>
+        // JavaScript to handle the WhatsApp popup click event
+        document.getElementById('whatsapp-popup').addEventListener('click', function () {
+            // Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp phone number
+            var phoneNumber = '9129664191';
+            var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RISE IN TECHNOLOGY</title>
@@ -151,8 +198,8 @@
 </div>
 
 <div class="communicate">
-    <h3>Rise Your Business With Us</h3>
-    <p>Connect With Us Now!!!</p>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+    <p>Lorem ipsum dolor sit amet.</p>
     <a href="#contact"><button class="btn">Contact Now</button></a>
 </div>
 
