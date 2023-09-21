@@ -146,12 +146,7 @@ body{
     padding: 0.5rem;
 }
 
-.header .fa-bars{
-    color: #fff;
-    cursor: pointer;
-    font-size: 3rem;
-    display: none;
-}
+
 
 .home{
     min-height: 100vh;
