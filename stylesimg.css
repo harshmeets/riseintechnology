@@ -1,0 +1,19 @@
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Individual slides */
+.slide {
+    display: inline-block;
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+/* Responsive images */
+img {
+    width: 100%;
+    height: auto;
+}
